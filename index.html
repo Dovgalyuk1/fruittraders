@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$FRUITS — Fruit Traders</title>
+<meta name="description" content="Fruit Traders LLC. The farm doesn't grow fruit to eat. It grows fruit to trade. $FRUITS.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍍</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TICKER TAPE -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">🍍 FRUIT TRADERS <span class="brand-ticker">$FRUITS</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#traders">The Traders</a>
+      <a href="#ledger">Farm Ledger</a>
+      <a href="#silo">Silo Report</a>
+      <a href="#howto">How to Buy</a>
+      <a href="#footer">Contract</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="soundBtn" title="Toggle farm sound" aria-label="Toggle sound">🔇</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="assets/hero-banner.jpg" alt="Fruit Traders pixel art banner — Don Piña the pineapple, Bananas the banana broker and Grape the analyst trading on the farm" id="heroImg">
+    <div class="hero-overlay-layer" id="overlayLayer">
+      <div class="ov ov-smoke" id="ovSmoke">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="ov ov-phoneglow" id="ovPhone"></div>
+      <div class="ov ov-laptopglow" id="ovLaptop">
+        <span class="ticknum" id="tickNum">+0.0%</span>
+      </div>
+      <div class="ov ov-windmill" id="ovWindmill">
+        <svg viewBox="0 0 100 100" class="blade-svg">
+          <g id="bladeGroup">
+            <ellipse cx="50" cy="18" rx="9" ry="30" fill="#7a5c3e" stroke="#4a3623" stroke-width="2"/>
+            <ellipse cx="82" cy="50" rx="30" ry="9" fill="#8a6c4a" stroke="#4a3623" stroke-width="2"/>
+            <ellipse cx="50" cy="82" rx="9" ry="30" fill="#6a4c2e" stroke="#4a3623" stroke-width="2"/>
+            <ellipse cx="18" cy="50" rx="30" ry="9" fill="#7a5c3e" stroke="#4a3623" stroke-width="2"/>
+            <circle cx="50" cy="50" r="7" fill="#3a2818" stroke="#1f150c" stroke-width="1.5"/>
+          </g>
+        </svg>
+      </div>
+      <div class="ov ov-chicken" id="ovChickenA">🐔</div>
+      <div class="ov ov-chicken ov-chicken-b" id="ovChickenB">🐔</div>
+    </div>
+    <div id="profitPopLayer" class="profit-pop-layer"></div>
+    <div class="hero-vignette"></div>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">100% ORGANIC. 0% RIPE.</p>
+    <h1>FRUIT TRADERS</h1>
+    <p class="hero-sub">The farm doesn't grow fruit to eat. It grows fruit <em>to trade.</em></p>
+    <div class="ca-row">
+      <span class="ca-label">CA</span>
+      <code id="caText">COMING SOON — NOT PLANTED YET</code>
+      <button id="copyBtn" class="copy-btn">Copy</button>
+    </div>
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary" id="buyBtn">🌱 Buy $FRUITS</a>
+      <a href="#" class="btn btn-ghost" id="chartBtn">📈 Chart</a>
+      <a href="#" class="btn btn-ghost" id="xBtn">🐦 X</a>
+    </div>
+  </div>
+</section>
+
+<!-- LORE / TRADERS -->
+<section class="section" id="traders">
+  <p class="section-kicker">// meet the desk</p>
+  <h2 class="section-title">MEET THE TRADERS</h2>
+  <p class="section-lede">Three fruits. One farm. Zero chill. They took one look at the candlestick charts growing wild behind the barn and decided that was a sign, not weather.</p>
+
+  <div class="trader-grid">
+    <article class="trader-card">
+      <div class="trader-emoji">🍍</div>
+      <h3>Don Piña</h3>
+      <p class="trader-role">Chairman &amp; Chief Cigar Officer</p>
+      <p>Wears sunglasses indoors, outdoors, and during video calls. Has never sold a single bag in his life — not because he's diamond-handed, he says, but because he "genuinely forgot the sell button exists." Smokes one cigar per green candle. Currently on cigar #4,812.</p>
+    </article>
+    <article class="trader-card">
+      <div class="trader-emoji">🍌</div>
+      <h3>Bananas McKrell</h3>
+      <p class="trader-role">Head of Client Relations (Angry)</p>
+      <p>Permanently on the phone with someone asking "wen lambo." Has been visibly furious since 2021. His resting face is his trading face. Answers every call the same way: "It's a healthy pullback." He has never once believed this.</p>
+    </article>
+    <article class="trader-card">
+      <div class="trader-emoji">🍇</div>
+      <h3>Grape Vintage</h3>
+      <p class="trader-role">Chief Analyst, Bunch of One</p>
+      <p>Laptop never closes. Technically a bunch of individual grapes sharing one Terminal login. Calls every red day "consolidation" and every green day "vindication." Nobody has ever seen the laptop screen and everybody trusts it completely.</p>
+    </article>
+  </div>
+</section>
+
+<!-- FARM LEDGER (tokenomics) -->
+<section class="section section-alt" id="ledger">
+  <p class="section-kicker">// the farm ledger</p>
+  <h2 class="section-title">THE FARM LEDGER</h2>
+  <p class="section-lede">Kept by hand, in a barn, by fruit. Audited by chickens. Somehow still more transparent than your bank.</p>
+
+  <div class="ledger-book">
+    <div class="ledger-row">
+      <span class="ledger-item">Tax on Buy / Sell</span>
+      <span class="ledger-dots"></span>
+      <span class="ledger-val">0% / 0%</span>
+      <span class="stamp">APPROVED</span>
+    </div>
+    <div class="ledger-row">
+      <span class="ledger-item">Liquidity Pool</span>
+      <span class="ledger-dots"></span>
+      <span class="ledger-val">Burned in the Barn</span>
+      <span class="stamp">APPROVED</span>
+    </div>
+    <div class="ledger-row">
+      <span class="ledger-item">Mint Authority</span>
+      <span class="ledger-dots"></span>
+      <span class="ledger-val">Revoked — Fed to Chickens</span>
+      <span class="stamp">APPROVED</span>
+    </div>
+    <div class="ledger-row">
+      <span class="ledger-item">Total Supply</span>
+      <span class="ledger-dots"></span>
+      <span class="ledger-val">1,000,000,000 $FRUITS</span>
+      <span class="stamp">APPROVED</span>
+    </div>
+    <div class="ledger-row">
+      <span class="ledger-item">Fruit Fuel Reserve</span>
+      <span class="ledger-dots"></span>
+      <span class="ledger-val">1 Crate (do not open on red days)</span>
+      <span class="stamp">APPROVED</span>
+    </div>
+  </div>
+</section>
+
+<!-- SILO REPORT (live stats) -->
+<section class="section" id="silo">
+  <p class="section-kicker">// evening silo report</p>
+  <h2 class="section-title">SILO REPORT</h2>
+  <p class="section-lede">Live from the farm terminal. Refreshes itself. Judges you slightly.</p>
+
+  <div class="silo-grid">
+    <div class="silo-card">
+      <span class="silo-label">Bushel Price</span>
+      <span class="silo-value" id="statPrice">N/A</span>
+    </div>
+    <div class="silo-card">
+      <span class="silo-label">Silo Reserves (MCAP)</span>
+      <span class="silo-value" id="statMcap">N/A</span>
+    </div>
+    <div class="silo-card">
+      <span class="silo-label">24H Harvest (Vol)</span>
+      <span class="silo-value" id="statVol">N/A</span>
+    </div>
+    <div class="silo-card">
+      <span class="silo-label">Farmhands (Holders)</span>
+      <span class="silo-value" id="statHolders">N/A</span>
+    </div>
+  </div>
+  <p class="silo-note" id="silo-note">Terminal will wake up once a contract is planted. Until then it's just Grape refreshing an empty tab.</p>
+</section>
+
+<!-- HOW TO BUY -->
+<section class="section section-alt" id="howto">
+  <p class="section-kicker">// the growing season</p>
+  <h2 class="section-title">SOW → GROW → HARVEST → PROFIT</h2>
+
+  <div class="season-grid">
+    <div class="season-card">
+      <span class="season-step">01 · SOW</span>
+      <h3>Get a Wallet</h3>
+      <p>Phantom or your Solana wallet of choice. This is your patch of dirt.</p>
+    </div>
+    <div class="season-card">
+      <span class="season-step">02 · GROW</span>
+      <h3>Add SOL</h3>
+      <p>Fund it with SOL. Water the field. No, it does not need "just a little more."</p>
+    </div>
+    <div class="season-card">
+      <span class="season-step">03 · HARVEST</span>
+      <h3>Swap for $FRUITS</h3>
+      <p>Head to the chart link, connect wallet, swap. The barn door opens automatically.</p>
+    </div>
+    <div class="season-card">
+      <span class="season-step">04 · PROFIT</span>
+      <h3>Hold. Touch grass (ironically).</h3>
+      <p>You now co-own a windmill that generates yield instead of electricity. Congratulations, farmer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD NOTES -->
+<section class="section" id="notes">
+  <p class="section-kicker">// field notes</p>
+  <h2 class="section-title">FIELD NOTES</h2>
+  <div class="notes-grid">
+    <div class="note-card">"The chart in the sky is not weather. Please stop asking the chickens about it." <span>— Don Piña</span></div>
+    <div class="note-card">"I have said 'healthy pullback' out loud eleven times today. It is 9:14 AM." <span>— Bananas McKrell</span></div>
+    <div class="note-card">"My laptop screen is a picture of a laptop screen. Nobody has checked. Bullish." <span>— Grape Vintage</span></div>
+    <div class="note-card">"webmaster's note: the windmill does not generate yield. it generates windmill. please stop asking." <span>— the farm</span></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">🍍 FRUIT TRADERS <span class="brand-ticker">$FRUITS</span></div>
+    <div class="footer-ca">
+      <span>CA:</span> <code id="caTextFooter">COMING SOON — NOT PLANTED YET</code>
+      <button id="copyBtnFooter" class="copy-btn">Copy</button>
+    </div>
+    <div class="footer-links">
+      <a href="#" id="xBtnFooter">X (soon)</a>
+      <a href="#" id="tgBtnFooter">Telegram (soon)</a>
+      <a href="#" id="chartBtnFooter">Chart (soon)</a>
+    </div>
+    <p class="footer-disclaimer">$FRUITS is a meme token with no intrinsic value or promise of financial return. It is not affiliated with any real farm, exchange, or fruit. Nothing on this site is financial advice. DYOR. The windmill still does not generate yield.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
