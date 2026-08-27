@@ -1,4 +1,4 @@
-// ===== Fruit Traders $FRUITS =====
+// ===== Fruit Traders $FRTDRS =====
 
 // ---- CONFIG: fill these in once the token is live ----
 const CONFIG = {
@@ -78,7 +78,7 @@ function buildTicker() {
   const track = document.getElementById("tickerTrack");
   if (!track) return;
   const symbols = [
-    ["$FRUITS", null], ["🍍 PINE", null], ["🍌 NANA", null], ["🍇 GRAPE", null],
+    ["$FRTDRS", null], ["🍍 PINE", null], ["🍌 NANA", null], ["🍇 GRAPE", null],
     ["🍓 BERRY", null], ["🍉 MELON", null], ["🥕 CARROT", null], ["🐔 EGG", null],
   ];
   const items = [];

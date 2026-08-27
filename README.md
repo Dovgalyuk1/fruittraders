@@ -1,4 +1,4 @@
-# $FRUITS — Fruit Traders
+# $FRTDRS — Fruit Traders
 
 Meme-coin landing page. Pure static HTML/CSS/JS, no build step.
 
